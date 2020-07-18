@@ -13270,7 +13270,7 @@ $\newcommand{\diff}{\,\mathrm{d}}$
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Point">Point<a class="anchor-link" href="#Point">&#182;</a></h2><p>A point is the simplest form of spatial data, being an infinitesimal entity defined by a set of coordinates in three-dimensional space.  We will use Cartesian coordinate system, but others such as cylindrical and spherical coordinates are common in engineering.</p>
-<p><img src="./img/drivetrainhub_math_point_3d.svg" alt="Point positioned in three-dimensional space with Cartesian coordinates" style="height: 220px"/></p>
+<p><img src="./img/drivetrainhub_math_point_3d.svg" alt="Point positioned in three-dimensional space with Cartesian coordinates" style="width: 100%; max-height: 220px"/></p>
 <p style="text-align: center; font-weight: bold;">Point positioned in three-dimensional space with Cartesian coordinates</p><div class="alert alert-block alert-info" style="box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, .13);">
     A point does not have an orientation or direction.  It is fully defined by its positional coordinates.
 </div><h3 id="Distance">Distance<a class="anchor-link" href="#Distance">&#182;</a></h3><p>The distance between two points in three-dimensional space is computed by first computing the distance of each axis as:</p>
@@ -13361,10 +13361,10 @@ $$l = \sqrt{l_x^2 + l_y^2 + l_z^2}$$<p>Notice the components of distance can be 
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Vector">Vector<a class="anchor-link" href="#Vector">&#182;</a></h2><p>Vectors are used extensively in the mathematical modeling of physical systems.  A vector is an entity with a <em>magnitude</em> and <em>direction</em>.  This can be illustrated with an arrow (direction) of a specified length (magnitude).  Magnitude is also referred to as <em>amplitude</em>.</p>
-<p><img src="./img/drivetrainhub_math_vector.svg" alt="Vector of magnitude and direction" style="height: 60px"/></p>
+<p><img src="./img/drivetrainhub_math_vector.svg" alt="Vector of magnitude and direction" style="width: 100%; max-height: 60px"/></p>
 <p style="text-align: center; font-weight: bold;">Vector of magnitude and direction</p><p>The magnitude of a time-invariant vector can be defined with a single scalar value.  The direction of a time-invariant vector can be defined in different ways, depending on the domain.  Since rotational mechanics pertains to the study of physical systems in three-dimensional space, the vector direction is commonly defined with components of Cartesian coordinates.</p>
 $$\vec{a} = a_x\x + a_y\y + a_z\z$$<p>where $\x, \y, \z$ are unit vectors corresponding to the Cartesian axes.  A vector in three-dimensions can be visualized relative to Cartesian axes as:</p>
-<p><img src="./img/drivetrainhub_math_vector_cartesian.svg" alt="Vector in Cartesian coordinate system" style="height: 220px"/></p>
+<p><img src="./img/drivetrainhub_math_vector_cartesian.svg" alt="Vector in Cartesian coordinate system" style="width: 100%; max-height: 220px"/></p>
 <p style="text-align: center; font-weight: bold;">Vector in a Cartesian coordinate system</p><p>A <em>unit vector</em> is a vector of unit (1.0) amplitude, expressed for $\vec{a}$ as:</p>
 $$\hat{a} = \frac{\vec{a}}{\|\vec{a}\|} = \frac{a_x}{a}\x + \frac{a_y}{a}\y + \frac{a_z}{a}\z$$<p>where $\|\vec{a}\|$, also notated as $a$, is the magnitude of $\vec{a}$ and calculated as:</p>
 $$\|\vec{a}\| = \sqrt{a_x^2 + a_y^2 + a_z^2}$$<p>For computations, a vector is often represented in array form:</p>
@@ -13379,7 +13379,7 @@ $$\vec{a} = \left[ a_x, a_y, a_z \right]$$<p>where $a_x, a_y, a_z$ are called <e
 <h3 id="Addition">Addition<a class="anchor-link" href="#Addition">&#182;</a></h3><p>Vectors can be added and subtracted by applying the math operation <em>element-wise</em>.  Element-wise means performing the math operation on the respective elements of each vector.  This becomes apparent when considering vector addition of $\vec{a}$ and $\vec{b}$:</p>
 $$\vec{a} + \vec{b} = (a_x + b_x)\x + (a_y + b_y)\y + (a_z + b_z)\z$$<p>Vector subtraction is performed similarly:</p>
 $$\vec{a} - \vec{b} = (a_x - b_x)\x + (a_y - b_y)\y + (a_z - b_z)\z$$<p>The addition and subtraction of vectors is visualized as:</p>
-<p><img src="./img/drivetrainhub_math_vector_addition.svg" alt="Adding and subtracting vectors" style="height: 130px"/></p>
+<p><img src="./img/drivetrainhub_math_vector_addition.svg" alt="Adding and subtracting vectors" style="width: 100%; max-height: 130px"/></p>
 <p style="text-align: center; font-weight: bold;">Adding and subtracting vectors</p>
 </div>
 </div>
@@ -13389,10 +13389,10 @@ $$\vec{a} - \vec{b} = (a_x - b_x)\x + (a_y - b_y)\y + (a_z - b_z)\z$$<p>The addi
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Dot-Product">Dot Product<a class="anchor-link" href="#Dot-Product">&#182;</a></h3><p>The dot product is a scalar resulting from the product of the magnitude of two vectors and the cosine of the angle, $\theta$, between the vectors.  It is also referred to as the <em>scalar product</em> and <em>inner product</em>.  Its geometric definition results in the equation:</p>
 $$\vec{a} \cdot \vec{b} = a b \cos\theta$$<p>where $\cdot$ denotes the dot product.  The geometric relationship of a dot product is illustrated below, noting that any two vectors in three-dimensional space lie within an arbitrary plane intersecting both vectors.</p>
-<p><img src="./img/drivetrainhub_math_dot_product.svg" alt="Dot product geometric relationship of two vectors" style="height: 130px"/></p>
+<p><img src="./img/drivetrainhub_math_dot_product.svg" alt="Dot product geometric relationship of two vectors" style="width: 100%; max-height: 130px"/></p>
 <p style="text-align: center; font-weight: bold;">Dot product geometric relationship</p><p>In the case of a dot product with a unit vector, the component of a vector in a given direction, per the unit vector, can be calculated.</p>
 $$\vec{a} \cdot \hat{b} = a \cos\theta$$<p>This <em>vector projection</em> calculation is made clear in the figure below.</p>
-<p><img src="./img/drivetrainhub_math_vector_projection.svg" alt="Vector projection via dot product with a unit vector" style="height: 200px"/></p>
+<p><img src="./img/drivetrainhub_math_vector_projection.svg" alt="Vector projection via dot product with a unit vector" style="width: 100%; max-height: 200px"/></p>
 <p style="text-align: center; font-weight: bold;">Vector projection from a dot product</p><p>The dot product can also be calculated algebraically in Cartesian component form as the sum of element-wise products:</p>
 $$\vec{a} \cdot \vec{b} = a_x b_x + a_y b_y + a_z b_z$$<p>Common applications of the dot product include:</p>
 <ol>
@@ -13415,7 +13415,7 @@ $$\vec{a} \cdot \vec{b} = a_x b_x + a_y b_y + a_z b_z$$<p>Common applications of
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Cross-Product">Cross Product<a class="anchor-link" href="#Cross-Product">&#182;</a></h3><p>The cross product is a vector that is orthogonal to the plane containing the two formulating vectors.  It is also referred to as the <em>vector product</em>.</p>
-<p><img src="./img/drivetrainhub_math_cross_product.svg" alt="Cross product of two vectors" style="height: 190px"/></p>
+<p><img src="./img/drivetrainhub_math_cross_product.svg" alt="Cross product of two vectors" style="width: 100%; max-height: 190px"/></p>
 <p style="text-align: center; font-weight: bold;">Cross product of two vectors</p><p>where $\vec{a} \times \vec{b}$ is the cross product.  Direction of the cross product is determined by the right-hand rule, and its magnitude is calculated as:</p>
 $$\|\vec{c}\| = \|\vec{a}\| \|\vec{b}\| \sin\theta$$<p>The cross product can also be calculated algebraically in Cartesian component form as:</p>
 $$\vec{c} = \vec{a} \times \vec{b} = (a_y b_z - a_z b_y)\x - (a_x b_z - a_z b_x)\y + (a_x b_y - a_y b_x)\z$$<p>Common applications of the cross product include:</p>
@@ -13534,7 +13534,7 @@ $$\vec{c} = \vec{a} \times \vec{b} = (a_y b_z - a_z b_y)\x - (a_x b_z - a_z b_x)
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Periodic-Signal">Periodic Signal<a class="anchor-link" href="#Periodic-Signal">&#182;</a></h2><p>In rotational mechanics, periodic signals are frequently encountered since rotation is a periodic motion, repeating every $2\pi$ radians or $360\deg$.  This is illustrated below for a shaft rotating at an angular velocity.</p>
-<p><img src="./img/drivetrainhub_math_periodic_shaft.svg" alt="Periodic motion of a rotating shaft" style="height: 175px"/></p>
+<p><img src="./img/drivetrainhub_math_periodic_shaft.svg" alt="Periodic motion of a rotating shaft" style="width: 100%; max-height: 175px"/></p>
 <p style="text-align: center; font-weight: bold;">Periodic motion of a rotating shaft</p><p>From the figure, it is obvious that a <em>period</em> is one rotation of the shaft, $2\pi$ radians.  As a function of time, the period depends on angular velocity:</p>
 $$T = \frac{2\pi}{\omega}$$<p>where units are seconds.  Therefore, the frequency in cycles per second (Hz) is calculated as the inverse of period:</p>
 $$f = \frac{1}{T} = \frac{\omega}{2\pi}$$<div class="alert alert-block alert-info" style="box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, .13);">
@@ -13550,11 +13550,11 @@ $$f = \frac{1}{T} = \frac{\omega}{2\pi}$$<div class="alert alert-block alert-inf
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Waveform">Waveform<a class="anchor-link" href="#Waveform">&#182;</a></h3><p>A common method to describe and illustrate periodic signals is by a <em>waveform</em>, sometimes called a <em>time series waveform</em>.  Waveforms represent signals as a function of time or some other independent variable that relates to time, such as rotation angle in the case of a rotating object.</p>
 <p>A sinusoid is a periodic signal with a continuous waveform, as illustrated below.</p>
-<p><img src="./img/drivetrainhub_math_sinusoidal_waveform.svg" alt="Waveform of periodic signal" style="height: 230px"/></p>
+<p><img src="./img/drivetrainhub_math_sinusoidal_waveform.svg" alt="Waveform of periodic signal" style="width: 100%; max-height: 230px"/></p>
 <p style="text-align: center; font-weight: bold;">Sinusoidal waveform</p><p>Mathematically, the waveform above can be defined by a sine function:</p>
 $$y(x) = a \sin(\omega x + \phi)$$<p>where independent variable, $x$, is usually time.  The cosine function can also be used since it is equal to the sine function with a phase shift:</p>
 $$\cos(x) = \sin(x + \pi / 2)$$<p>Graphically, sine and cosine functions are compared below for $\omega=1$.</p>
-<p><img src="./img/drivetrainhub_math_sine_and_cosine.svg" alt="Comparison of sine and cosine functions" style="height: 200px"/></p>
+<p><img src="./img/drivetrainhub_math_sine_and_cosine.svg" alt="Comparison of sine and cosine functions" style="width: 100%; max-height: 200px"/></p>
 <p style="text-align: center; font-weight: bold;">Comparison of sine and cosine functions</p><p>Notice the phase shift results in sine <em>lagging</em> cosine by $\pi/2$, or cosine <em>leading</em> sine by $\pi/2$.</p>
 <div class="alert alert-block alert-info" style="box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, .13);">
     <b>Sinusoids are the foundation of periodic signals and can be used to describe non-sinusoidal functions.</b>
@@ -13569,11 +13569,11 @@ $$\cos(x) = \sin(x + \pi / 2)$$<p>Graphically, sine and cosine functions are com
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Euler's-Formula">Euler's Formula<a class="anchor-link" href="#Euler's-Formula">&#182;</a></h3><p>Euler's formula is useful for simplifying the mathematical representation and interpretation of complex functions.  In its simplest form, it is expressed as:</p>
 $$e^{i\phi} = \cos\phi + i\sin\phi$$<p>where $e^{i\phi}$ is a unit complex number. It is easiest to understand the formula by illustrating it as a vector in the complex plane with a unit circle:</p>
-<p><img src="./img/drivetrainhub_math_euler_formula.svg" alt="Euler formula in complex plane" style="height: 280px"/></p>
+<p><img src="./img/drivetrainhub_math_euler_formula.svg" alt="Euler formula in complex plane" style="width: 100%; max-height: 280px"/></p>
 <p style="text-align: center; font-weight: bold;">Euler formula in complex plane</p><p>where it can be seen how a complex number relates to Euler's formula as:</p>
 $$x + iy = r \left( \cos\phi + i\sin\phi \right) = r e^{i\phi}$$<p>where $r=1$ in the figure above, calculated as $r = \sqrt{x^2 + y^2}$.  A more useful form of Euler's formula for our purpose is to express it as a function of time as:</p>
 $$r e^{i (\omega t + \phi)} = r \left( \cos(\omega t + \phi) + i\sin(\omega t + \phi) \right)$$<p>where $r$ is the complex vector <em>magnitude</em>, $\omega$ is <em>angular frequency</em>, and $\phi$ is <em>phase angle</em>.  This formula allows a <em>rotating vector</em> to be expressed with simple mathematical notation.  This means Euler's formula can be used to represent periodic signals.  The relationship between a rotating complex vector and a time-series waveform is illustrated below.  Note the complex plane axes are rotated for illustration purposes.</p>
-<p><img src="./img/drivetrainhub_math_euler_formula_waveform.svg" alt="Euler formula waveform" style="height: 300px"/></p>
+<p><img src="./img/drivetrainhub_math_euler_formula_waveform.svg" alt="Euler formula waveform" style="width: 100%; max-height: 300px"/></p>
 <p style="text-align: center; font-weight: bold;">Rotating complex vector and its waveform signal</p><p>where the real part of the rotating complex vector equals the cosine function and hence represents the time-series waveform of a physical signal.</p>
 
 </div>
@@ -13691,7 +13691,7 @@ $$\hat{f}(\omega) = \int_{-\infty}^{\infty} f(x)\, e^{-i \omega x} \diff x$$<p>w
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Orders">Orders<a class="anchor-link" href="#Orders">&#182;</a></h4><p>For completeness, the <em>order</em> of a periodic signal is explained.  Order does not have anything in particular to do with Fourier analysis, but it is a term frequently used when analyzing periodic signals.  An order defines the frequency of a signal <em>relative</em> to the frequency of another signal.</p>
-<p><img src="./img/drivetrainhub_math_frequency_order.svg" alt="Rotating shaft with four cogs" style="height: 200px"/></p>
+<p><img src="./img/drivetrainhub_math_frequency_order.svg" alt="Rotating shaft with four cogs" style="width: 100%; max-height: 200px"/></p>
 <p style="text-align: center; font-weight: bold;">Rotating shaft with four cogs</p><p>In the illustration above, the shaft rotates at a certain speed and the four (4) cogs attached to it rotate at the same speed.  However, if we consider frequency of the cogs from an observer watching the shaft rotate, they will see four cogs pass for each rotation of the shaft.  Thus, the cog pass-frequency is 4x the shaft frequency.  If the shaft is defined as the reference, then it has order 1.0 and the cogs have order 4.0.  This is true regardless of rotational speed.</p>
 <p>Mathematically, we can define a signal's order as a function of its frequency relative to a <em>reference freqency</em>:</p>
 $$\text{order} = \frac{f}{f_\text{ref}}$$<p>Despite looking similar to the definition of harmonics, orders are not required to be integer multiples and any frequency can be used as a reference frequency.</p>
@@ -13815,11 +13815,11 @@ $3 e^{i (1 t + 3.142) }$
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="System-of-Equations">System of Equations<a class="anchor-link" href="#System-of-Equations">&#182;</a></h3><p>The general form of a single linear equation with $n$-variables is:</p>
 $$a_1 x_1 + a_2 x_2 + ... + a_n x_n = b$$<p>where $x_1, x_2, ..., x_n$ are the variables, $a_1, a_2, ..., a_n$ are the coefficients, and $b$ is a constant.  A well known linear equation is that of a line in two-dimensional space, $y = m x + b$.  Geometrically, this can be interpreted as:</p>
-<p><img src="./img/drivetrainhub_math_linalg_line.svg" alt="Linear equation visualized as a line in two dimensions" style="height: 250px"/></p>
+<p><img src="./img/drivetrainhub_math_linalg_line.svg" alt="Linear equation visualized as a line in two dimensions" style="width: 100%; max-height: 250px"/></p>
 <p style="text-align: center; font-weight: bold;">Linear equation visualized as a line in two dimensions</p><p>where the coefficients are $a_1 = -m$ and $a_2 = 1$, and constant $b$ is the $x_2$-intercept, usually notated as the $y$-intercept in slope-intercept form.  From the figure, it is obvious to visualize the linear relationship between the two variables, $x_1$ and $x_2$.  For a linear equation of three variables, the geometric interpretation is a plane instead of line.  Linear equations with more variables are difficult to visualize, but the same concepts apply mathematically.</p>
 <p>If multiple linear equations are considered together, it is called a <em>system of linear equations</em> and is of the form:</p>
 $$a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n = b_1$$$$a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n = b_2$$$$\vdots$$$$a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n = b_m$$<p>with $m$-equations and $n$-variables.  By introducing another line in the previous figure, a system of two linear equations with two variables can be visualized as:</p>
-<p><img src="./img/drivetrainhub_math_linalg_lines2.svg" alt="System of linear equations visualized as lines in two dimensions" style="height: 250px"/></p>
+<p><img src="./img/drivetrainhub_math_linalg_lines2.svg" alt="System of linear equations visualized as lines in two dimensions" style="width: 100%; max-height: 250px"/></p>
 <p style="text-align: center; font-weight: bold;">System of linear equations visualized as lines in two dimensions</p><p>where it is easily observed that the <em>solution</em>, i.e. the value of each variable that satisfies all equations, is the intersection point of the two lines.  Linear system solutions are discussed more in a later section.</p>
 <p>In matrix form, a linear system of $m$-equations and $n$-variables is written as:</p>
 $$
@@ -13851,7 +13851,7 @@ $$A \pmb{x} = \pmb{b}$$<p>where $A$ is the coefficients matrix, $\pmb{x}$ is the
     <br><br>
     Linearization is acceptable when the solution to a specific operating point or condition is of interest.  However, linearization is not acceptable if nonlinear effects must be captured, such as transient events in a highly nonlinear dynamical system.  If only small nonlinearities exist, linearization is likely acceptable.
 </div><p>When formulating a system of linear equations, it is possible to have a system that has no solution or the equations have dependencies that result in a redundant solution.  In the latter case, the system is said to be <em>linearly dependent</em>, which can be visualized as three lines intersecting at a single point for a system with two variables:</p>
-<p><img src="./img/drivetrainhub_math_linalg_lines3.svg" alt="System of linearly dependent equations visualized as lines in two dimensions" style="height: 250px"/></p>
+<p><img src="./img/drivetrainhub_math_linalg_lines3.svg" alt="System of linearly dependent equations visualized as lines in two dimensions" style="width: 100%; max-height: 250px"/></p>
 <p style="text-align: center; font-weight: bold;">System of linearly dependent equations visualized as lines in two dimensions</p><p>It is clear that any one of these lines can be discarded and the same solution is still obtained.  This means that any of the equations can be derived algebraically from the other equations and are therefore linearly dependent.</p>
 <div class="alert alert-block alert-info" style="box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, .13);">
     <b>A system of linearly independent equations has exactly one solution if the number of equations matches the number of variables.</b>
@@ -14006,11 +14006,11 @@ r_{zx} &amp; r_{zy} &amp; r_{zz}
 \end{bmatrix}
 \begin{bmatrix} \hat{X} \\ \hat{Y} \\ \hat{Z}\end{bmatrix}
 $$<p>where the coefficients matrix is the rotation matrix.  This can be illustrated as:</p>
-<p><img src="./img/drivetrainhub_math_cartesian_axes_3d.svg" alt="Cartesian axes oriented in three-dimensional space" style="height: 240px"/></p>
+<p><img src="./img/drivetrainhub_math_cartesian_axes_3d.svg" alt="Cartesian axes oriented in three-dimensional space" style="width: 100%; max-height: 240px"/></p>
 <p style="text-align: center; font-weight: bold;">Cartesian axes oriented in three-dimensional space</p><p>It is clear the rotation matrix in this context defines the orientation of one coordinate system <em>relative to</em> another.  For two coordinate systems <em>oriented</em> identically, even if positioned differently, the rotation matrix is equal to the identity matrix:</p>
 $$R = \begin{bmatrix}1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1\end{bmatrix}$$<p>With rotations applied, each Cartesian vector must remain orthogonal to each other and of unit magnitude.  As an example, Cartesian axes rotated about the y-axis by $90\deg$ has a rotation matrix equal to:</p>
 $$R = \begin{bmatrix}0 &amp; 0 &amp; -1 \\ 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0\end{bmatrix}$$<p>which can be visualized as:</p>
-<p><img src="./img/drivetrainhub_math_cartesian_axes_rotation_90y.svg" alt="Cartesian axes rotated about y-axis" style="height: 260px"/></p>
+<p><img src="./img/drivetrainhub_math_cartesian_axes_rotation_90y.svg" alt="Cartesian axes rotated about y-axis" style="width: 100%; max-height: 260px"/></p>
 <p style="text-align: center; font-weight: bold;">Cartesian axes rotated about y-axis</p><div class="alert alert-block alert-info" style="box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, .13);">
     <b>A rotation matrix defines the axes of an object's local coordinate system when used to define the orientation of the object.</b>
     <br><br>
@@ -14024,7 +14024,7 @@ $$R = \begin{bmatrix}0 &amp; 0 &amp; -1 \\ 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Coordinate-Transformation">Coordinate Transformation<a class="anchor-link" href="#Coordinate-Transformation">&#182;</a></h4><p>Coordinate transformation, sometimes called <em>rotational transformation</em>, is the process of applying a rotation matrix to a Cartesian vector or axes (set of vectors) to modify its orientation.  The section above has already demonstrated a coordinate transformation, but it was explained in the context of <em>defining the orientation</em> of coordinate axes.  Here, the rotation matrix will be used in the context of <em>modifying the orientation</em>.</p>
 <p>It is easiest to visualize a coordinate transformation in two-dimensions, but the same concept and mathematics extend to three-dimensions.</p>
-<p><img src="./img/drivetrainhub_math_coordinate_transformation_2d_passive.svg" alt="Planar coordinate transformation" style="height: 160px"/></p>
+<p><img src="./img/drivetrainhub_math_coordinate_transformation_2d_passive.svg" alt="Planar coordinate transformation" style="width: 100%; max-height: 160px"/></p>
 <p style="text-align: center; font-weight: bold;">Planar coordinate transformation of axes</p><p>From the figure, equations can be derived to express the rotated coordinate system, $\left(\hat{x}', \hat{y}' \right)$, as a function of the original coordinate system, $\left(\hat{x}, \hat{y} \right)$:</p>
 $$\begin{bmatrix}
 \hat{x}' \\ \hat{y}'
@@ -14037,7 +14037,7 @@ $$\begin{bmatrix}
 \hat{x} \\ \hat{y}
 \end{bmatrix}
 $$<p>where the coefficients define the rotation matrix of the coordinate transformation.  This formulation corresponds to a <em>passive transformation</em>, whereas an <em>active transformation</em> can be derived by considering the rotation of a vector or point in a given coordinate system:</p>
-<p><img src="./img/drivetrainhub_math_coordinate_transformation_2d_active.svg" alt="Planar coordinate transformation of vector" style="height: 160px"/></p>
+<p><img src="./img/drivetrainhub_math_coordinate_transformation_2d_active.svg" alt="Planar coordinate transformation of vector" style="width: 100%; max-height: 160px"/></p>
 <p style="text-align: center; font-weight: bold;">Planar coordinate transformation of vector</p><p>For the sake of deriving equations, the figure illustrates two scenarios:  rotating of unit vector $\hat{a} = [1, 0]$ on left, and rotating of unit vector $\hat{a} = [0, 1]$ on right.  Equations can be derived to express the rotated vector components, $\left(\hat{a}'_x, \hat{a}'_y \right)$, as a function of the original vector components, $\left(\hat{a}_x, \hat{a}_y \right)$:</p>
 $$\begin{bmatrix}
 \hat{a}'_x \\ \hat{a}'_y
@@ -14067,7 +14067,7 @@ $$R = \begin{bmatrix}
 -\sin\theta &amp; \cos\theta &amp; 0 \\
 0 &amp; 0 &amp; 1
 \end{bmatrix}$$<p>where a rotation vector, $\vec{\theta} = \left[0, 0, \theta \right]$, defines a rotation about the z-axis.  This method can be extended to consider the rotation about <em>any</em> axis in three-dimensional space, as illustrated below.</p>
-<p><img src="./img/drivetrainhub_math_coordinate_transformation_about_axis.svg" alt="Rotation about an arbitrary axis" style="height: 290px"/></p>
+<p><img src="./img/drivetrainhub_math_coordinate_transformation_about_axis.svg" alt="Rotation about an arbitrary axis" style="width: 100%; max-height: 290px"/></p>
 <p style="text-align: center; font-weight: bold;">Rotation about an arbitrary axis</p><p>The rotation matrix for the passive transformation about an arbitrary axis of rotation, with magnitude $\theta$ and direction $\hat{\theta} = u_x\hat{x} + u_y\hat{y} + u_z\hat{z}$, is calculated as:</p>
 $$R = 
 \begin{bmatrix}
@@ -14097,7 +14097,7 @@ $$A' = R^\top A$$<p>where $R^\top$ is the rotation matrix of an active transform
     - Vector defining the position, $\vec{r}$, of the body relative to the ground reference frame.<br>
     - First, rotation is applied to the rigid body about an axis in its local reference frame.<br>
     - Then, rotation is applied to the rigid body about an axis in the global reference frame.<br>
-    <img src="./img/drivetrainhub_math_example_rotation_matrix.svg" alt="Rotation Matrix Example" style="height: 290px"/>
+    <img src="./img/drivetrainhub_math_example_rotation_matrix.svg" alt="Rotation Matrix Example" style="width: 100%; max-height: 290px"/>
     <h4>FIND</h4>
     1) Position, $\vec{r}'$, and orientation, $A'$, of the body after the local rotation, $\theta$, is applied.<br>
     2) Position, $\vec{r}''$, and orientation, $A''$, of the body after the global rotation, $\Theta$, is applied.<br>

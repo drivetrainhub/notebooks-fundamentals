@@ -13018,45 +13018,6 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-
-    </style>
-<style type="text/css">
     /*This file contains any manual css for this page that needs to override the global styles.
 This is only required when different pages style the same element differently. This is just
 a hack to deal with our current css styles and no new styling should be added in this file.*/
@@ -13275,7 +13236,7 @@ $\newcommand{\deg}{^\circ}$
 </ol>
 <p>This notebook focuses on <em>kinematics</em>, the rigid body motion of rotating systems.  It is the most fundamental to assessing the operation and performance of a drivetrain, requiring the least fidelity to mathematically model and solve.</p>
 <h4 id="Kinematics">Kinematics<a class="anchor-link" href="#Kinematics">&#182;</a></h4><p>The kinematics of a three-dimensional system of bodies is considered throughout this notebook.  To simplify analysis without misrepresenting the physical system, an axis of rotation is assumed for each rotating body.  Plus, any rotational couplings between bodies are assumed to affect only motion about each axis of rotation.</p>
-<p><img src="./img/drivetrainhub_kinematics_axis_of_rotation.svg" alt="Axis of rotation in three-dimensional space" style="height: 220px"/></p>
+<p><img src="./img/drivetrainhub_kinematics_axis_of_rotation.svg" alt="Axis of rotation in three-dimensional space" style="width: 100%; max-height: 220px"/></p>
 <p style="text-align: center; font-weight: bold;">Axis of rotation in three-dimensional space</p><p>These assumptions allow analysis of a three-dimensional system of arbitrarily oriented bodies to be simplified to the analysis of a single degree-of-freedom (DOF) for each body.  Without this simplification, each body would have 3-DOF that require solving, i.e. rotation about three orthogonal axes.  Specifically, kinematics is interested in the rate of change for the DOF, $\theta$, about the axis of rotation:</p>
 $$\vec{\omega} = \frac{\rm{d}\vec{\theta}}{\rm{d}t}$$<p>Since kinematics is only concerned about the steady state motion of rigid bodies, it is unecessary to model mass, inertia, forces, or moments.  The field of <em>kinetics</em>, sometimes generally referred to as <em>dynamics</em>, is concerned with those quantities.  Kinetics is outside the scope of this notebook.</p>
 <div class="alert alert-block alert-info" style="box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, .13);">
@@ -13304,7 +13265,7 @@ $$\vec{\omega} = \frac{\rm{d}\vec{\theta}}{\rm{d}t}$$<p>Since kinematics is only
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Pair">Pair<a class="anchor-link" href="#Pair">&#182;</a></h3><p>This section formulates the kinematics of a single parallel gear pair, as illustrated below.</p>
-<p><img src="./img/drivetrainhub_kinematics_parallel_gear_pair.svg" alt="Kinematics diagram of parallel gear pair" style="height: 250px"/></p>
+<p><img src="./img/drivetrainhub_kinematics_parallel_gear_pair.svg" alt="Kinematics diagram of parallel gear pair" style="width: 100%; max-height: 250px"/></p>
 <p style="text-align: center; font-weight: bold;">Kinematics diagram of parallel gear pair</p><p>The gear pair is rotationally coupled by meshing gear teeth.  Since each gear body is modeled with a single DOF, $\theta$, two variables exist for the kinematics of this system: $\omega_1, \omega_2$.  To create a solvable system of equations for the kinematics, we must formulate equations as a function of these variables.  As explained in our notebooks on gear geometry, the transmission ratio of the gear pair is easily calculated as the ratio of gear teeth:</p>
 $$i = \frac{z_2}{z_1} = \frac{\|\vec{\omega_1}\|}{\|\vec{\omega_2}\|}$$<p>where the magnitude of angular velocities are related by this ratio.  By knowing that gears in an external gear mesh rotate in opposite directions and that a single component of each angular velocity vector is non-zero, the classical form of a linear equation can be written as:</p>
 $$\omega_1 + i \omega_2 = 0$$<p>If this were not a 1-DOF formulation, $\omega_1$ would be expressed as $\omega_{1z}$ if the local z-axis were the axis of rotation.  For brevity, the notation has been simplified.  For the kinematics to be fully defined, we must impose a speed constraint on the system.  If we arbitrarily choose to specify a constant input speed, $\Omega_1$, a second equation is written as:</p>
@@ -13333,7 +13294,7 @@ $$<p>and numerical solvers can be used to solve the linear system.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered celltag_hide_input">
 
 <div class="output_wrapper">
 <div class="output">
@@ -13392,7 +13353,7 @@ $$<p>and numerical solvers can be used to solve the linear system.</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Idler">Idler<a class="anchor-link" href="#Idler">&#182;</a></h3><p>This section formulates the kinematics of a parallel idler gear set, as illustrated below.</p>
-<p><img src="./img/drivetrainhub_kinematics_idler_gear_set.svg" alt="Kinematics diagram of idler gear set" style="height: 250px"/></p>
+<p><img src="./img/drivetrainhub_kinematics_idler_gear_set.svg" alt="Kinematics diagram of idler gear set" style="width: 100%; max-height: 250px"/></p>
 <p style="text-align: center; font-weight: bold;">Kinematics diagram of idler gear set</p><p>The gear set consists of two gear pairs, each rotationally coupled by meshing gear teeth.  Since each gear body is modeled with a single DOF, $\theta$, three variables exist for the kinematics of this system: $\omega_1, \omega_2, \omega_3$.  To create a solvable system of equations for the kinematics, we must formulate equations as a function of these variables.  The transmission ratio of the input-idler gear pair is calculated as:</p>
 $$i_{12} = \frac{z_2}{z_1} = \frac{\|\vec{\omega_1}\|}{\|\vec{\omega_2}\|}$$<p>and similarly for the idler-output gear pair:</p>
 $$i_{23} = \frac{z_3}{z_2} = \frac{\|\vec{\omega_2}\|}{\|\vec{\omega_3}\|}$$<p>By formulating equations in terms of the angular velocity components, the linear equations are written as:</p>
@@ -13422,7 +13383,7 @@ $$<p>and numerical solvers can be used to solve the linear system.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered celltag_hide_input">
 
 <div class="output_wrapper">
 <div class="output">
@@ -13485,7 +13446,7 @@ $$<p>and numerical solvers can be used to solve the linear system.</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Compound">Compound<a class="anchor-link" href="#Compound">&#182;</a></h3><p>This section formulates the kinematics of a parallel compound gear set, as illustrated below.</p>
-<p><img src="./img/drivetrainhub_kinematics_compound_parallel_gear_set.svg" alt="Kinematics diagram of compound parallel gear set" style="height: 300px"/></p>
+<p><img src="./img/drivetrainhub_kinematics_compound_parallel_gear_set.svg" alt="Kinematics diagram of compound parallel gear set" style="width: 100%; max-height: 300px"/></p>
 <p style="text-align: center; font-weight: bold;">Kinematics diagram of compound parallel gear set</p><p>The gear set consists of three gear pairs, each rotationally coupled by meshing gear teeth.  Since each gear body is modeled with a single DOF, $\theta$, five variables exist for the kinematics of this system: $\omega_1, \omega_2, \omega_3, \omega_4, \omega_5$.  To create a solvable system of equations for the kinematics, we must formulate equations as a function of these variables.</p>
 <p>In addition to the transmission ratio equations of the previous section for the idler gear set, this gear set has an additional equation for the transmission ratio of the final gear pair:</p>
 $$i_{45} = \frac{z_5}{z_4} = \frac{\|\vec{\omega_4}\|}{\|\vec{\omega_5}\|}$$<p>By formulating equations in terms of the angular velocity components, the linear equation is written as:</p>
@@ -13522,7 +13483,7 @@ $$<p>and numerical solvers can be used to solve the linear system.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered celltag_hide_input">
 
 <div class="output_wrapper">
 <div class="output">
@@ -13610,7 +13571,7 @@ $$<p>and numerical solvers can be used to solve the linear system.</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="1-Planet">1 Planet<a class="anchor-link" href="#1-Planet">&#182;</a></h3><p>This section formulates the kinematics of a planetary gear set with a single planet, as illustrated below.  Many architectures exist for planetary gearing, but the most traditional layout is considered here.</p>
-<p><img src="./img/drivetrainhub_kinematics_planetary_gear_set_1p.svg" alt="Kinematics diagram of planetary gear set with 1 planet" style="height: 450px"/></p>
+<p><img src="./img/drivetrainhub_kinematics_planetary_gear_set_1p.svg" alt="Kinematics diagram of planetary gear set with 1 planet" style="width: 100%; max-height: 450px"/></p>
 <p style="text-align: center; font-weight: bold;">Kinematics diagram of planetary gear set with 1 planet</p><p>A planetary gear set with a single planet is a 4-DOF system.  Namely, rotation of the sun gear, planet gear, carrier, and ring gear.  It may not be obvious yet, but the kinematics of the planetary gear set are unique in several ways.  It will be shown that more than a single constraint must be imposed to create a solvable system, unlike the parallel gearing architectures considered previously.</p>
 <div class="alert alert-block alert-danger" style="box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, .13);">
     <b>A single planet design is not recommended for any applications, as it has low power density, no force cancellations, and carrier imbalance.</b>
@@ -13630,7 +13591,7 @@ $$\vec{\omega}_{pg} = \vec{\omega}_p + \vec{\omega}_c$$
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Formulation">Formulation<a class="anchor-link" href="#Formulation">&#182;</a></h4><p>To formulate the kinematics of the planetary gear set, we will consider the linear velocity at the pitch point of each mesh per the illustration below.</p>
-<p><img src="./img/drivetrainhub_kinematics_planetary_gear_set_1p_velocities.svg" alt="Planetary gear mesh pitch point velocities" style="height: 450px"/></p>
+<p><img src="./img/drivetrainhub_kinematics_planetary_gear_set_1p_velocities.svg" alt="Planetary gear mesh pitch point velocities" style="width: 100%; max-height: 450px"/></p>
 <p style="text-align: center; font-weight: bold;">Planetary gear mesh pitch point velocities</p><h5 id="Sun-Planet-Mesh">Sun-Planet Mesh<a class="anchor-link" href="#Sun-Planet-Mesh">&#182;</a></h5><p>For the sun-planet gear mesh, the constraint equation for linear velocity at the pitch point is written as:</p>
 $$\vec{v}_s = \vec{v}_{ps}$$<p>where $\vec{v}_{ps}$ is the linear <em>ground</em> velocity of the planet gear at the sun-planet mesh pitch point.  From the figure, we can see how to write these linear velocity vectors as a function of angular velocities, which is what we are interested in solving:</p>
 $$\vec{\omega}_s \times \vec{r}_s = \vec{\omega}_p \times \vec{r}_p + \vec{\omega}_c \times \vec{r}_s$$<p>where $r$ is pitch radius.  Notice how the carrier angular velocity, $\vec{\omega}_c$, contributes to the linear ground velocity of the planet.  By enforcing a consistent sign convention, the vector equation can be expressed in terms of its angular velocity components as:</p>
@@ -13688,7 +13649,7 @@ $$<p>and numerical solvers can be used to solve the linear system.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered celltag_hide_input">
 
 <div class="output_wrapper">
 <div class="output">
@@ -13767,7 +13728,7 @@ $\omega_{pg} = -0.238 \text{ rad/s}$
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="3-Planets">3 Planets<a class="anchor-link" href="#3-Planets">&#182;</a></h3><p>This section formulates the kinematics of a planetary gear set with a three planets, as illustrated below.  Many architectures exist for planetary gearing, but the most traditional layout is considered here.  Three planets is a common layout with attributes for robust planet load sharing under conditions of system errors caused by manufacturing, assembly, and operating deflections.</p>
-<p><img src="./img/drivetrainhub_kinematics_planetary_gear_set_3p.svg" alt="Kinematics diagram of planetary gear set with 3 planets" style="height: 450px"/></p>
+<p><img src="./img/drivetrainhub_kinematics_planetary_gear_set_3p.svg" alt="Kinematics diagram of planetary gear set with 3 planets" style="width: 100%; max-height: 450px"/></p>
 <p style="text-align: center; font-weight: bold;">Kinematics diagram of planetary gear set with 3 planets</p><p>A planetary gear set with three planets is a 6-DOF system.  Namely, rotation of the sun gear, three planet gears, carrier, and ring gear.  The same concepts apply the three-planet system as were revied for the single-planet system.  Deriving the equations for kinematics is analogous, but now the angular velocities of a second and third planet, $\omega_{p2}$ and $\omega_{p3}$, must be considered.</p>
 <p>Before proceeding with the kinematics formulation, it must be known that each planet is required to have the same number of teeth for a valid planetary gear set.</p>
 $$z_{p1} = z_{p2} = z_{p3}$$<p>Since the relationship of number of teeth and pitch radius is linearly proportional for cylindrical involute gearing, the pitch radii are also equal.</p>
@@ -13847,7 +13808,7 @@ $$<p>Despite creating a fully defined system, the linearly dependent equations h
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered celltag_hide_input">
 
 <div class="output_wrapper">
 <div class="output">
